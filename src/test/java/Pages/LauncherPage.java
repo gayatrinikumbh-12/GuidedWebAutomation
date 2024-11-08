@@ -4,14 +4,15 @@ import java.time.Duration;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LauncherPage {
+public class LauncherPage extends BasePage  {
 
-	 private WebDriver webDriver;
+	// private WebDriver webDriver;
 
 	    public LauncherPage(WebDriver webDriver) {
-	        this.webDriver = webDriver;
+	    	 super(webDriver);
 	    }
 
 
@@ -21,7 +22,13 @@ public class LauncherPage {
 	    }
 	    
 	    public boolean isSiteLoaded() {
-	        return new WebDriverWait(webDriver, Duration.ofSeconds(10)).until(
-	                webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
+	    	 WebDriverWait wait = new WebDriverWait(webDriver, Duration.ofSeconds(10));
+	    	    return wait.until(new ExpectedCondition<Boolean>() {
+	    	        @Override
+	    	        public Boolean apply(WebDriver driver) {
+	    	            return ((JavascriptExecutor) driver).executeScript("return document.readyState").equals("complete");  
+
+	    	        }
+	    	    });
 	    }
 }
