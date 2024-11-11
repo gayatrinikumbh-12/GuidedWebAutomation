@@ -11,7 +11,7 @@ import Pages.LauncherPage;
 import drivers.DriverCreator;
 
 public class SearchTest {
-	public String browser = "HEADLESS";
+	public String browser = "chrome";
 	@Test
 	public void verifyIfSearchTermShowsRelevantResults() throws InterruptedException {
 

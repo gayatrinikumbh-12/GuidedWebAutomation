@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -40,7 +40,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Surefire_suite" class="navigator-link">
-              <span class="suite-name border-passed">Surefire suite</span>
+              <span class="suite-name border-failed">Surefire suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -93,7 +93,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods,   4 passed</span>
+                    <span class="method-stats">5 methods, 1 failed,   4 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Surefire_suite" class="hide-methods failed suite-Surefire_suite"> (hide)</a> <!-- hide-methods failed suite-Surefire_suite -->
+                      <a href="#" panel-name="suite-Surefire_suite" class="show-methods failed suite-Surefire_suite"> (show)</a> <!-- show-methods failed suite-Surefire_suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Surefire_suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="BuyAProductTests" class="method navigator-link" hash-for-method="buyProduct">buyProduct</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Surefire_suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -134,6 +148,28 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Surefire_suite" class="panel Surefire_suite">
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">BuyAProductTests</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="buyProduct">
+                  </a> <!-- buyProduct -->
+                  <span class="method-name">buyProduct</span>
+                  <div class="stack-trace">java.lang.Error: Unresolved compilation problem: 
+	browser cannot be resolved to a variable
+
+	at BuyAProductTests.buyProduct(BuyAProductTests.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 32 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
           <div class="suite-Surefire_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -181,6 +217,7 @@
 &lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;BuyAProductTests&quot;/&gt;
       &lt;class name=&quot;SearchTest&quot;/&gt;
       &lt;class name=&quot;TestRunner&quot;/&gt;
     &lt;/classes&gt;
@@ -196,7 +233,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (2 classes)</span>
+                <span class="test-name">Surefire test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -222,28 +259,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'verifyIfSearchTermShowsRelevantResults')
 data.setCell(0, 2, 'SearchTest')
-data.setCell(0, 3, 10641);
+data.setCell(0, 3, 12736);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifySearchUnavailableProduct')
+data.setCell(1, 1, 'verifyBrandSearchListsOnlyBrandItems')
 data.setCell(1, 2, 'SearchTest')
-data.setCell(1, 3, 7993);
+data.setCell(1, 3, 12259);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifySearchResultCountMatchesDisplayedItems')
 data.setCell(2, 2, 'SearchTest')
-data.setCell(2, 3, 7938);
+data.setCell(2, 3, 11759);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'verifyBrandSearchListsOnlyBrandItems')
+data.setCell(3, 1, 'verifySearchUnavailableProduct')
 data.setCell(3, 2, 'SearchTest')
-data.setCell(3, 3, 6707);
+data.setCell(3, 3, 10886);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'buyProduct')
+data.setCell(4, 2, 'BuyAProductTests')
+data.setCell(4, 3, 11);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 seconds</span>
+              <span class="suite-total-time">Total running time: 47 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -269,22 +310,31 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
+              <div class="chronological-class-name">BuyAProductTests</div> <!-- chronological-class-name -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">buyProduct</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
               <div class="chronological-class-name">SearchTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">verifyBrandSearchListsOnlyBrandItems</span>
-                <span class="method-start">0 ms</span>
+                <span class="method-start">31 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifyIfSearchTermShowsRelevantResults</span>
-                <span class="method-start">6713 ms</span>
+                <span class="method-start">12291 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySearchResultCountMatchesDisplayedItems</span>
-                <span class="method-start">17356 ms</span>
+                <span class="method-start">25028 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">verifySearchUnavailableProduct</span>
-                <span class="method-start">25295 ms</span>
+                <span class="method-start">36788 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

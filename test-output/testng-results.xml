@@ -1,28 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+<testng-results ignored="3" total="4" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-11-08T12:03:56 IST" name="Default suite" finished-at="2024-11-08T12:04:25 IST" duration-ms="28062">
+  <suite started-at="2024-11-08T14:08:43 IST" name="Default suite" finished-at="2024-11-08T14:08:57 IST" duration-ms="14490">
     <groups>
     </groups>
-    <test started-at="2024-11-08T12:03:56 IST" name="Default test" finished-at="2024-11-08T12:04:25 IST" duration-ms="28062">
+    <test started-at="2024-11-08T14:08:43 IST" name="Default test" finished-at="2024-11-08T14:08:57 IST" duration-ms="14490">
       <class name="SearchTest">
-        <test-method signature="verifyBrandSearchListsOnlyBrandItems()[pri:0, instance:SearchTest@306e95ec]" started-at="2024-11-08T12:03:56 IST" name="verifyBrandSearchListsOnlyBrandItems" finished-at="2024-11-08T12:04:05 IST" duration-ms="8190" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyBrandSearchListsOnlyBrandItems -->
-        <test-method signature="verifyIfSearchTermShowsRelevantResults()[pri:0, instance:SearchTest@306e95ec]" started-at="2024-11-08T12:04:05 IST" name="verifyIfSearchTermShowsRelevantResults" finished-at="2024-11-08T12:04:13 IST" duration-ms="8789" status="PASS">
+        <test-method signature="verifyIfSearchTermShowsRelevantResults()[pri:0, instance:SearchTest@1b2abca6]" started-at="2024-11-08T14:08:43 IST" name="verifyIfSearchTermShowsRelevantResults" finished-at="2024-11-08T14:08:57 IST" duration-ms="14415" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyIfSearchTermShowsRelevantResults -->
-        <test-method signature="verifySearchResultCountMatchesDisplayedItems()[pri:0, instance:SearchTest@306e95ec]" started-at="2024-11-08T12:04:13 IST" name="verifySearchResultCountMatchesDisplayedItems" finished-at="2024-11-08T12:04:17 IST" duration-ms="3561" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchResultCountMatchesDisplayedItems -->
-        <test-method signature="verifySearchUnavailableProduct()[pri:0, instance:SearchTest@306e95ec]" started-at="2024-11-08T12:04:17 IST" name="verifySearchUnavailableProduct" finished-at="2024-11-08T12:04:24 IST" duration-ms="7453" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchUnavailableProduct -->
       </class> <!-- SearchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
